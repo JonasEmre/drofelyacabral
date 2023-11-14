@@ -30,3 +30,9 @@ def sosyal_fobi(request):
 
 def dinletiler(request):
     return render(request, 'core/dinletiler.html')
+
+def hakkinda(request):
+    return render(request, 'core/hakkinda.html')
+
+def iletisim(request):
+    return render(request, 'core/iletisim.html')

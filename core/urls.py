@@ -11,4 +11,6 @@ urlpatterns = [
     path('ofke-kontrol-bozukluk/', views.ofke_kontrol_bozukluk, name="ofke-kontrol-bozukluk"),
     path('sosyal-fobi/', views.sosyal_fobi, name="sosyal-fobi"),
     path('dinletiler/', views.dinletiler, name="dinletiler"),
+    path('hakkinda/', views.hakkinda, name="hakkinda"),
+    path('iletisim/', views.iletisim, name="iletisim"),
 ]
