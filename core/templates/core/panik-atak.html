@@ -1,0 +1,521 @@
+{% extends 'core/base.html' %} {% block content %}
+{% load static %}
+<!-- Youtube Embed Bölümü-->
+<header>
+  <div class="container-fluid text-center bg-dark">
+    <iframe
+      width="359"
+      height="638"
+      src="https://www.youtube.com/embed/OGjdVW8Nbaw"
+      title="Online Panik Atak Tedavisi | Dr. Ofelya Cabral (2022)"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <!-- Header ve Başlıklar -->
+  <section>
+    <div class="container">
+      <div class="text-center my-4">
+        <h1>Online Panik Atak Tedavisi</h1>
+      </div>
+      <div class="my-4">
+        <p>
+          Hangi şehirde olursanız olun Dr. Ofelya Cabral’ın
+          <strong>panik atak tedavilerine</strong> bulunduğunuz yerden,
+          internetten yani <strong>online</strong> olarak katılabilir ve
+          kendisinin önderliğinde canlı bir şekilde düzenlenen tedavi programına
+          başlayabilirsiniz. Katılmak isteyenlere tedaviden önce Dr. Ofelya
+          Cabral birebir online <strong>ön görüşme</strong>
+          yapmaktadır. 2005 yılından bu yana kendisini kanıtlamış panik atak
+          programı hakkında daha fazla bilgi almak için kliniğimize
+          ulaşabilirsiniz.
+        </p>
+      </div>
+    </div>
+  </section>
+</header>
+
+<main>
+  <!-- Adım Adım Tedavi Süreci -->
+  <section class="card m-3 py-3 border-bottom" id="features">
+    <div class="text-center my-1">
+      <h2>Adım Adım Program Süreci</h2>
+    </div>
+    <div class="container-fluid px-3 my-3">
+      <div class="row gx-5">
+        <div class="col-lg-3 mb-2 mb-lg-0">
+          <div class="row-lg text-center mb-2">
+            <div class="feature">
+              <img
+                src="{% static 'core/icons/online-on-gorusme-icon.svg' %}"
+                alt="Online ön görüşme"
+              />
+            </div>
+          </div>
+          <h2 class="h4 fw-bolder">1- Online Ön Görüşme</h2>
+          <p>
+            Katılmak isteyenlerin, teşhislerini yapmak ve programın hastaya
+            uygun olup olmadığını anlamak amacıyla Dr. Ofelya Cabral birebir
+            online ön görüşme yapıyor.
+          </p>
+        </div>
+        <div class="col-lg-3 mb-2 mb-lg-0">
+          <div class="row-lg text-center mb-2">
+            <div class="feature">
+              <img
+                src="{% static 'core/icons/online-panik-atak-seminer-icon.svg' %}"
+                alt="Online Panik Atak Semineri"
+              />
+            </div>
+          </div>
+          <h2 class="h4 fw-bolder">2- Online Canlı Eğitim Semineri</h2>
+          <p>
+            Ön görüşme sonrasında ufak gruplarla yapılan ve bir gün (6 saat)
+            süren panik atak eğitim seminerlerimiz, Dr. Ofelya Cabral ve bu
+            konuda 9 yıl tecrübeye sahip olan ekibiyle beraber yapılıyor.
+          </p>
+        </div>
+        <div class="col-lg-3 mb-2 mb-lg-0">
+          <div class="row-lg text-center mb-2">
+            <div class="feature">
+              <img
+                src="{% static 'core/icons/set-program-icon.svg' %}"
+                alt="Online Panik Atak Tedavisi"
+              />
+            </div>
+          </div>
+          <h2 class="h4 fw-bolder">3- 21 Günlük Set Program</h2>
+          <p>
+            Eğitim sonrasında gündelik hayatına devam eden hastamız, set
+            programı ile desteklediğimiz ve her gün ortalama bir saat ayıracağı
+            21 günlük bilinçaltı tedavi programını uyguluyor ve bu süre içinde
+            bizimle irtibat halinde oluyor.
+          </p>
+        </div>
+        <div class="col-lg-3 mb2 mb-lg-0">
+          <div class="row-lg text-center mb-2">
+            <div class="feature">
+              <img
+                src="{% static 'core/icons/yuz-yuze-terapi.svg' %}"
+                alt="Online Panik Atak Tedavisi"
+              />
+            </div>
+          </div>
+          <h2 class="h4 fw-bolder">4- Takip Seansı</h2>
+          <p>
+            21 günlük tedavi programı sonrasında Ofelya hanım ile birebir 1 tane
+            online veya yüz yüze takip seansı yapılıyor. Buradaki amaç son durum
+            değerlendirmesi yapmak ve hasta üzerinde karar vermektir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Panik atak hakkındaki yazı -->
+  <!-- Panik atak nedir? Ne tür belirtilerle gelir?-->
+  <section>
+    <div class="container">
+      <div class="my-4">
+        <h3>Panik Atak Nedir?</h3>
+      </div>
+      <article>
+        <div class="my-4">
+          <p>
+            Panik atak aniden ortaya çıkan, yoğun <strong>fiziksel</strong> ve
+            <strong>duygusal</strong> belirtilerle gelen ve vücudun yüksek
+            stresin sonucunda devreye soktuğu mekanizmadır.
+          </p>
+
+          <p>
+            Özellikle hayatımızda
+            <strong>belirgin bir değişiklik</strong> yaşandığında ve bu durumdan
+            dolayı <strong>stres</strong> hissettiğimizde ortaya çıkan bir
+            durumdur. Panik atak hayat kalitesini oldukça düşüren iç
+            huzursuzluğu, anksiyete hali, ve stresten dolayı oluşan
+            <strong>fiziksel belirtileri</strong> beraberinde getirir. Birçok
+            kaynağa göre ne kadar sürdüğü tartışma konusu olsa da ortalama
+            <strong>5 dk</strong> ile <strong>20 dk</strong> arasında sürdüğü
+            söylenir.
+          </p>
+
+          <p>
+            Tüm bu fiziksel belirtilerin temel sebebi ise vücutta artan
+            <strong>adrenalinin</strong> panik atak için gereken eşiği aşıp
+            artık yoğun fiziksel belirtilere sebebiyet verebilecek seviyelere
+            çıkmasıdır.
+          </p>
+
+          <p>
+            Birçok belirgin belirtilerin yanında bazı ufak sayılabilecek
+            belirtiler de mevcuttur. Sıkça yaşanan belirtileri sıralayacak
+            olursak liste aşağıda olduğu gibidir:
+          </p>
+          <ul>
+            <li>Kalp çarpıntısı</li>
+            <li>Cilt renginde solma</li>
+            <li>Mide bulantısı</li>
+            <li>Baş dönmesi</li>
+            <li>Denge kaybı hissi</li>
+            <li>
+              Bulanık görme (Sanki çok yorulmuş gibi bakarken odaklanma zorluğu)
+            </li>
+            <li>Boğazda yumru hissi</li>
+            <li>Nefes almakta zorluk hissi</li>
+            <li>
+              Yutkunmada zorluk (Yemek yerken boğazımda kalacak endişesi, ağız
+              kuruluğu)
+            </li>
+            <li>
+              El, ayak ve vücudun bazı yerlerinde oluşan uyuşmalar, kas
+              seyirmeleri, karıncalanma
+            </li>
+            <li>
+              El, ayak ve vücudun bazı yerlerinde oluşan uyuşmalar, kas
+              seyirmeleri, karıncalanmaKarın ağrısı (Sancı, şişlik)
+            </li>
+            <li>
+              Bağırsak ve mesane hareketlerinde artış (Sık idrara çıkma veya
+              ishal)
+            </li>
+            <li>Terleme, üşüme, titreme</li>
+            <li>Panik atak sonrası oluşan yorgunluk</li>
+          </ul>
+          <p>
+            Yukarıda sıralamış olduğumuz liste panik atak anında oluşan
+            <strong>fizyolojik</strong>
+            belirtilerdir. Ancak panik atak yaşayan kişilerin bu belirtilerin
+            üzerine ek olarak
+            <strong>psikolojik</strong> belirtiler de gösterdiği bilinir.
+            Özellikle ilk panik atak tecrübelerinin sonrasında oluşan “tekrar
+            yaşarsam” ya da “bilmediğim bir anda bu durum bana tekrar geri
+            gelirse” veya “bu belirtiler bende bir sağlık sorunu olduğuna
+            işaretse?” tarzında düşüncelerle oluşan korkular, endişeler ve
+            fobiler domino taşları gibi birbiri ardına sıralanabilir.
+          </p>
+
+          <p>
+            Psikolojik belirtilerinin listesi de aşağıda olduğu gibidir. Bu
+            belirtiler çoğunlukla temelinde,
+            <strong>adrenalin</strong> hormonunun zihinde yarattığı hassaslık,
+            çabuk etkilenme, korku ve endişelerden kaynaklanır.
+          </p>
+          <ul>
+            <li>
+              Kontrolü kaybetme korkusu (“İstemediğim bir şeyi yapabilirim”)
+            </li>
+            <li>
+              Bayılma korkusu (Panik atak bayılmaya sebebiyet vermese bile
+              belirtiler bayılma öncesi hissini andırabilir)
+            </li>
+            <li>
+              Ölüm korkusu (Anlık gelen şiddetli korku ve üzerine yerleşen
+              “hastalığım teşhis edilemeyecek ve öleceğim” korkusu)
+            </li>
+            <li>
+              Delirme korkusu (Bu korku herkeste olmasa bile bazı kişilerde
+              meydana gelir.)
+            </li>
+            <li>
+              Ortama ve kişinin kendisine karşı yabancılaşma hissi (Rüya ya da
+              filmdeymiş gibi hissetmek, çevreyi ve kendisini tanıyamamak)
+            </li>
+            <li>
+              Tuhaf takıntılı düşünceler (Genellikle otobüs ya da uçak gibi
+              ortamların panik atağa sebebiyet verdiğine dair olan inancın
+              gelişmesi ve kişinin bazı ortamlara girmekten kaçınması)
+            </li>
+          </ul>
+          <p>
+            Yukarıda bahsedilen <strong>fizyolojik</strong> ya da psikolojik
+            belirtilerin
+            <strong>mutlaka hepsinin birden olması gerekmiyor.</strong> Bu
+            belirtilerden <strong>bazıları</strong> yaşanabilir ya da
+            <strong>tüm belirtiler</strong> birden <strong>yaşanabilir</strong>.
+            Bu kişinin durumuna göre değişiklik gösterir.
+          </p>
+
+          <p>
+            Öte yandan <strong>5 dk ile 20 dk</strong> arasında sürdüğü
+            söylenilse de, daha <strong>uzun süreli ataklar</strong> geçirdiğini
+            söyleyenler de vardır. Bunun sebebiyse panik ataktan sonra vücudun
+            rahatlama sürecinde hemen kendine gelememesidir. Daha uzun süreli
+            geçirilen panik atak, kesin olmamakla beraber, altında
+            <strong>anksiyete bozukluğu (endişe) ve depresyon</strong> gibi
+            konuların da yatıyor olabileceğine işarettir.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Panik atak sağlığa zararlı mıdır? -->
+  <section>
+    <div class="container">
+      <div class="my-4">
+        <h3>Panik Atak Sağlığa Zararlı mı?</h3>
+      </div>
+      <article>
+        <div class="my-4">
+          <p>
+            Bu soruya kısaca “Hayır” diye yanıt verebiliriz. Nedenini gelin
+            beraber inceleyelim.Vücut kendisini stresli veya hayati tehlikesi
+            olduğuna inandığı bir durumun içinde bulduğunda hayatta kalma
+            mekanizmasını devreye sokar. Bu
+            <strong>hayatta kalma mekanizmasına</strong> savaş ya da kaç (fight
+            or flight) mekanizması denir. Bu mekanizmanın devreye girdiğinin en
+            temel göstergesi, vücutta adrenalin hormonunun salgılanmasıdır.
+          </p>
+          <p>
+            Adrenalin, vücutta
+            <strong>hayatta kalma içgüdüsünün</strong> çalıştığının
+            göstergesidir. Adrenalin salgılandıktan sonra vücutta bizim
+            bildiğimiz ismiyle panik atak veya savaş ya da kaç mekanizması
+            başlamış olur.Panik atağın ne zaman ve ne sıklıkta yaşanacağı,
+            <strong>bireyin durumuna, stres seviyesine</strong> ve
+            <strong>yaşadıklarına</strong> göre
+            <strong>değişiklik gösterir</strong>.
+          </p>
+          <p>
+            Yukarıda anlatılanlara ek olarak şunu söyleyebiliriz; hayatta kalma
+            içgüdüsünün çarkını döndüren mekanizmalardan biri olan panik atak,
+            <strong>vücuda zarar veremez</strong>. Bu, zaten en başında ortaya
+            çıkışına neden olan
+            <strong
+              >hayatta kalma içgüdüsünün mantığına tamamen ters olur</strong
+            >.
+          </p>
+          <p>
+            Yaşanan fiziksel belirtiler (örneğin; kalp çarpıntısı, uyuşmalar
+            vs.) ve vücudun strese verdiği tepkiler asla kendisine zarar verecek
+            seviyelere çıkmaz.Otonom sinir sistemi adrenalin salgılanması
+            sırasında oluşan belirtilerde, vücudun kaldırabileceği sınırları
+            bilir ve bu bilgiye göre hareket eder. Örneğin; kalp çarpıntısı
+            ortalama 120-130 BPM arasında seyir eder; vücut bu seviyeleri
+            rahatlıkla kaldırabileceğini bilir ve kaldırabilir de.Panik atak
+            geçiren kişilerin sıkça söylediği bir söz vardır: “Doktora,
+            hastaneye test yaptırmak için gidiyorum fakat herhangi bir sağlık
+            sorununuz yok diyorlar “. Bu
+            <strong>fiziksel</strong>
+            olarak hiçbir rahatsızlığının söz konusu
+            <strong>olmadığının</strong>
+            işaretidir.
+          </p>
+          <p>
+            Psikolojik tarafına bakarsak; panik atak sırasında özellikle
+            hastalık korkuları, ölüm korkusu, kontrolü kaybetme korkusu veya
+            delirme korkusu gibi gündelik endişeyi arttıran kaygılar eklenir.
+            Bunlar sadece anksiyete çatısı altında ele alınabilir ve fiziksel
+            bir sağlık sorununa işaret etmez. Bu kaygılar için
+            <strong>terapi</strong> ve <strong>uygun eğitimler</strong> almak
+            faydalı olacaktır.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Panik atak ve panik bozukluğu arasındaki fark nelerdir? -->
+  <section>
+    <div class="container">
+      <div class="my-4">
+        <h3>Panik Atak ve Panik Bozukluğu Arasındaki Fark</h3>
+      </div>
+      <article>
+        <div class="my-4">
+          <p>
+            Bu gerçekten çok karıştırılan ve aydınlatılması elzem bir konu.
+            Toplumda, hatta eğitimli kesimlerde bile bu iki kavramın aynı
+            olduğunu düşünülebiliyor. İsim benzerliği insana aksini düşündürse
+            de; bunlar temelde <strong>çok ayrı iki kavramdır</strong>.
+          </p>
+
+          <p>
+            Öncelikle <strong>panik atak nedir?</strong> Belirtileri, sebepleri
+            ve detaylarına değindik ancak kısaca tekrar özetlemek gerekirse;
+            “Panik atak korkuyla beraber yaşanan, vücudun strese karşılık vermiş
+            olduğu
+            <strong>fiziksel</strong>
+            tepkiler bütünüdür. Bu belirtilere örnek olarak, kalp çarpıntısı,
+            terleme, uyuşma, karıncalanma, nefes darlığı vs. örnek
+            gösterilebilir.
+          </p>
+
+          <p>
+            Panik atağı kısaca tanımladığımıza göre şimdi her zaman karıştırılan
+            <strong>panik bozukluğuna</strong> değinebiliriz. Panik bozukluğu,
+            <strong>zihinde gelişen bir düşünce durumudur</strong>. Yani yaşanan
+            panik atak anlarından sonra insan şunu düşünebilir; “ben ne
+            yaşadım?“, “bu yaşadığım kalp krizi miydi?“, “bu yaşadığımı bir daha
+            yaşar mıyım?“… Doğal olarak bu tarz korkular ve düşüncelere,
+            <strong>yani acaba “panik atağı tekrar yaşar mıyım”</strong>
+            korkusuna panik bozukluğu denir.
+          </p>
+
+          <p>
+            Özetle <strong>panik atak</strong> yaşanan
+            <strong
+              >stres ve korkunun fiziksel etkileri, panik bozukluğu ise zihinde
+              gerçekleşen psikolojik etkileri diyebiliriz.</strong
+            >
+          </p>
+
+          <p>
+            Peki gelelim meşhur soruya: Her panik atak yaşayan panik bozukluğu
+            yaşar mı?
+          </p>
+
+          <p>
+            Bu sorunun cevabı da yine hayır olacaktır. Her panik atak yaşayan
+            yaşadığına bir anlam yüklemez. Hatta bazılarımız panik atak yaşar
+            ama yaşadığını bile fark etmeyip hayatına normal bir şekilde devam
+            eder. Bazıları da “panik atak geçiririm” korkusuyla doktora, acil
+            servis bölümüne gider ve test sonuçları çıktıktan sonra “aslında bir
+            şeyim yokmuş” diye düşünüp, hayatına kaldığı yerden devam eder.
+          </p>
+
+          <p>
+            Panik bozukluğu “bir daha panik atak yaşarsam” korkusu olduğu için
+            <strong>vücudun rutin endişe seviyesini artırır</strong> ve bu
+            artışın sonucunda da panik atağın günlük sıklıkta yaşanması daha
+            <strong>muhtemel</strong> hale gelir. Ancak bu durum da kişiye göre
+            değişir.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Panik atak ve anksiyete bozukluğu arasındaki bağ nelerdir? -->
+  <section>
+    <div class="container">
+      <div class="my-4">
+        <h4>Panik Atak ve Anksiyete Bozukluğu Arasındaki Bağ</h4>
+      </div>
+      <article>
+        <div class="my-4">
+          <p>
+            Özellikle yeni başlayan panik atak süreçlerinde anksiyete bozukluğu
+            çok yoğun olmayabilir. Ancak zamanla panik atak yerini anksiyete
+            bozukluğuna bırakabilir.
+          </p>
+
+          <p>
+            Örneğin; birisi panik atağın ilk süreçlerindeyken durum onun için
+            çok yenidir ve hayatının bazı yerlerinde henüz panik atak geçirmemiş
+            olabilir.
+          </p>
+          <p>
+            İlk zamanlardayken henüz yolculukta, uçakta, otobüste, sosyal
+            ortamlarda veya yalnız kaldığında herhangi bir panik atak tecrübesi
+            olmadığı için, hatırında bu ortamlardan sakınmasını gerektirecek bir
+            <strong>anksiyete tecrübesi</strong> de bulunmaz. Ancak zaman
+            geçtikçe bu yerlerde panik atak yaşadıkça, onun için bu tarz
+            durumlar artık panik atak
+            <strong>tetikleyici düşman faktörler</strong> haline dönüşebilir.
+          </p>
+          <p>
+            Örneğin, bir öğrenci kalabalık bir sınıfa girdiğinde ve panik atak
+            yaşadığında, artık kalabalık sosyal ortamlar, kapalı ve kalabalık
+            yerler bu öğrenciye
+            <strong>yaşadığı panik atağı anımsatabilir</strong>. Dolayısıyla bu
+            gibi yerlerden kaçınmaya başlayabilir. Böylece artık gündelik
+            tetikleyici faktörleri ve endişe seviyesi artmış; yani vücutta
+            <strong>adrenalin</strong> seviyesi yükselmiş olur.
+          </p>
+
+          <p>
+            Yukarıda anlatılanlara dayanarak şöyle söylemek mümkündür; “Panik
+            atak gündelik endişe seviyesini arttırabilir ve bireyi daha hassas
+            bir hale getirebilir“. Dolayısıyla kendini bir
+            <strong>iç huzursuzluk</strong>, kötü bir şey olacakmış hissi içinde
+            bulabilir.
+          </p>
+          <p>
+            Anlatılan kötü hikayelerden veya kötü haberlerden kolaylıkla
+            etkilenebilir, çok normal durumlarda
+            <strong>ağlama hissi veya çabuk sinirlenme</strong> gibi durumlar
+            yaşayabilir. Bunlar elbette hayat kalitesini kayda değer derecede
+            düşüren etkenlerdir.
+          </p>
+
+          <p>
+            Genellikle panik atak yaşayan kişilerin endişeleri sağlık konularına
+            yönelebilir. Özellikle panik ataktan dolayı yaşanan fiziksel
+            belirtilerin adrenalin seviyesi yükseldiğinde vücudun kendini
+            korumak için verdiği tepkiler olduğu bilinci oluşmadıysa ayırt etmek
+            zordur.
+          </p>
+          <p>
+            Bu belirtilerden yola çıkarak gerçek bir rahatsızlık olduğu
+            düşünülebilir. Mesela
+            <strong>panik atak anında yaşanan kalp çarpıntısı</strong> ve
+            vücutta oluşan kas uyuşmalarından dolayı, “kalp krizi geçireceğim
+            veya sağlığımda başka bir sorun var ve teşhis edilemiyor” tarzında
+            düşüncelere yol açabilir.
+          </p>
+
+          <p>
+            Zaman içerisinde panik atağın üzerine eklenen diğer rahatsızlıklara
+            <strong>panik atak piramidi</strong> adı verilir.
+          </p>
+          <p>
+            Özellikle uzun süredir panik atak yaşayanlarda bu piramit daha
+            kompleks bir yapıdadır. Panik atağı tedavi ettikten sonra piramidin
+            ilk katmanını çözmüş oluruz.
+          </p>
+          <p>
+            Böylece diğer katmanlar üzerinde terapi uygulamak kolaylaşır. Panik
+            ataktan bağımsız olarak yaşadığınız bir başka sorunun kökeni
+            piramidin en alt katmanına dayanıyor, ve siz bunun panikle ilgili
+            olduğunu fark etmeden yaşıyor olabilirsiniz. Ancak piramidinizi
+            beraber incelediğimizde ortaya çıkacak olan resimle, hayatınızda
+            yaratmış olduğu görünmez etkileri de gün yüzüne çıkacak. Zaten
+            temelde panik atağı tedavi etmek, piramidin diğer katmanlarında
+            oluşmuş olan sorunların etkisini azaltır. Dolayısıyla panik ataktan
+            kurtulmak gündelik endişe seviyesini düşürmekle birlikte, birçok
+            konuda da <strong>iyileşme</strong> sağlayacaktır.
+          </p>
+
+          <p>
+            Buraya kadar okuduğunuza göre; muhtemelen ya panik ataktan
+            <strong>kurtulmak istediğinizi</strong> ya da tanıdığınız birine bu
+            konuda <strong>yardımcı olmak istediğinizi anlıyorum</strong>. Bu
+            yüzden sözü bitirmeden önce şunu da eklemek istiyorum: Panik atak
+            yaşamaya ne zaman başlamış olursanız olun, yaşadığınız bu
+            bilinmezlik ve endişe dolu durumun bir çıkışı ve
+            <strong>çaresi var</strong>.
+          </p>
+          <p>
+            Ekibim ve ben süreç boyunca sizlere eşlik etmekten ve kolaylaştırıcı
+            rolü oynamaktan memnuniyet duyarız.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sayaç Bölümü -->
+  <div class="container col-lg d-flex justify-content-center my-5 text-center">
+    <div class="row-lg mx-4">
+      <span class="counter display-counter" data-max="17">0</span
+      ><span class="display-counter">+</span>
+      <p class="display-counter-text">YILDIR DEVAM EDEN TECRÜBE</p>
+    </div>
+    <div class="row-lg mx-4">
+      <span class="counter display-counter" data-max="750">0</span
+      ><span class="display-counter">+</span>
+      <p class="display-counter-text">DEFA DÜZENLENEN SEMİNER</p>
+    </div>
+    <div class="row-lg mx-4">
+      <span class="counter display-counter" data-max="6000">0</span
+      ><span class="display-counter">+</span>
+      <p class="display-counter-text">PANİK ATAK KATILAN</p>
+    </div>
+  </div>
+</main>
+
+<script src="{% static 'core/js/panik-atak-counter.js' %}"></script>
+
+{% endblock %}
