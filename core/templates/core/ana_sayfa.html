@@ -1,39 +1,22 @@
-{% extends 'core/base.html' %} {% load static %} {% block content %}
+{% extends 'core/base.html' %} {% load static %} 
+
+{% block content %}
 <header
-  class="header-banner py-5"
+  class="header-banner py-4"
   style="
     background-image: url('{% static 'core/assets/Dr-Ofelya-Cabral-banner.webp' %}');
-  "
+    "
 >
-  <div class="container px-5">
-    <div class="row gx-5 justify-content-center">
-      <div class="col-lg-6">
-        <div class="text-center my-5">
-          <h1 class="display-5 fw-bolder text-white mb-2">
-            Online Panik Atak Tedavilerimiz Devam Ediyor
-          </h1>
-          <p class="lead text-white-50 mb-4">
-            Programların nasıl yapıldığı hakkında bilgi almak ve ön görüşme
-            yapmak için bize ulaşabilirsiniz.
-          </p>
-          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features"
-              >İletişim</a
-            >
-            <a class="btn btn-outline-light btn-lg px-4" href="#!"
-              >Daha Fazla Bilgi</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <h1 class="text-white text-center px-2 mb-5">
+    Online Panik Atak Tedavisi
+  </h1>
+  <h2 class="text-white text-center">Bilgi almak için bize ulaşın</h2>
 </header>
 
 <main>
   <!-- Giriş yazısı -->
   <section>
-    <div class="container px-5 mt-3">
+    <div class="container px-3 mt-3">
       <p class="text-center">
         Panik atak konusunda binlerce kişiye tedavi yolunu göstermiş
         <strong>Dr. Ofelya Cabral</strong>, doktorluğunu kendi muayenehanesinde
@@ -48,8 +31,8 @@
 
   <!-- Hizmetler / Services-->
   <section class="py-5 border-bottom" id="features">
-    <div class="container px-5">
-      <div class="row gx-5">
+    <div class="container px-3">
+      <div class="row gx-3">
         <div class="col-lg-4 mb-5 mb-lg-0">
           <div class="row-lg text-center mb-2">
             <div class="feature">
@@ -123,36 +106,18 @@
       <div class="row justify-content-center">
         <!-- Tedavi Listesi-->
         <div class="col-lg-6 col-xl-4">
-          <div class="card">
+          <div class="card my-3">
             <div class="card-body">
               <div class="mb-3">
                 <span class="display-4 fw-bold">Tedaviler</span>
               </div>
               <ul class="list-unstyled mb-4">
-                <li class="mb-2">
-                  <i class="bi bi-check text-primary"></i>
-                  Panik Atak
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check text-primary"></i>
-                  Anksiyete / Endişe Bozukluğu
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check text-primary"></i>
-                  Depresyon
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check text-primary"></i>
-                  İlişki Terapisi
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check text-primary"></i>
-                  Öfke Kontrol Bozukluğu
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check text-primary"></i>
-                  Obsesif Kompulsif Bozukluk
-                </li>
+                <li class="mb-2">Panik Atak ve Panik Bozukluğu</li>
+                <li class="mb-2">Anksiyete - Endişe Bozukluğu</li>
+                <li class="mb-2">Depresyon</li>
+                <li class="mb-2">İlişki ve Çift Terapisi</li>
+                <li class="mb-2">Öfke Kontrol Bozukluğu</li>
+                <li class="mb-2">Takıntılı Düşünceler</li>
               </ul>
             </div>
           </div>
@@ -164,7 +129,7 @@
   <!-- Dinletiler Banner -->
   <section>
     <div>
-      <a href="#">
+      <a href="{% url 'dinletiler' %}">
         <!-- Use the anchor element to create a link -->
         <img
           class="mw-100"
@@ -236,9 +201,7 @@
               form
             </div>
             <div class="py-2">
-              <button type="submit" class="btn btn-outline-primary">
-                Abone Ol
-              </button>
+              <button type="submit" class="btn btn-primary">Abone Ol</button>
             </div>
           </form>
         </div>

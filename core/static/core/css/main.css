@@ -1,72 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+
 :root {
-    --cool-red: rgb(253, 68, 68);
-  
-    --charcoal: #264653ff;
-    --persian-green: #2a9d8fff;
-    --saffron: #e9c46aff;
-    --sandy-brown: #f4a261ff;
-    --burnt-sienna: #e76f51ff;
+  --cool-red: rgb(253, 68, 68);
+
+  --charcoal: #264653ff;
+  --persian-green: #2a9d8fff;
+  --saffron: #e9c46aff;
+  --sandy-brown: #f4a261ff;
+  --burnt-sienna: #e76f51ff;
+
+  --flat-black: #000;
+}
+
+::selection {
+  background: var(--sandy-brown);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+p {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--persian-green);
+}
+
+a {
+  color: var(--persian-green);
+}
+
+.display-counter {
+  font-size: calc(1.625rem + 5vw);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--burnt-sienna);
+}
+
+.display-counter-text {
+  font-weight: 600;
+  color: var(--burnt-sienna);
+}
+
+.feature {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  font-size: 2rem;
+}
+
+.google-map-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 40%;
+  /* 16:9 aspect ratio (720 / 1280) */
+}
+
+.google-map-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header-banner {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header-banner h1 {
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.header-banner h2 {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 300px) {
+  .header-banner {
+    height: 50vh;
   }
-  
-  * {
-    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (min-width: 370px) {
+  .header-banner {
+    height: 40vh;
   }
-  
-  p {
-    font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .header-banner {
+    height: 60vh;
   }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 600;
-    color: var(--persian-green);
-  }
-  
-  a {
-    color: var(--persian-green);
-  }
-  
-  .display-counter {
-    font-size: calc(1.625rem + 5vw);
-    font-weight: 600;
-    line-height: 1.2;
-    color: var(--burnt-sienna);
-  }
-  
-  .display-counter-text {
-    font-weight: 600;
-    color: var(--burnt-sienna);
-  }
-  
-  .feature {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 5rem;
-    width: 5rem;
-    font-size: 2rem;
-  }
-  
-  .google-map-container {
-    position: relative;
-    width: 100%;
-    padding-top: 40%;
-    /* 16:9 aspect ratio (720 / 1280) */
-  
-    iframe {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
-  }
-  
-  .header-banner{
-    background-size: cover;
-    background-position: center;
-  }
+}
+
+/* Özel Başlık */
+.title-header {
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+}
+
+/* Utility Sınıfları */
+.bg-primary-pg {
+  background-color: var(--persian-green);
+}
+
+.flat-black {
+  color: var(--flat-black);
+}
