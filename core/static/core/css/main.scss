@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,400&display=swap");
+@import "variables";
+@import "navbar";
+@import "hamburger";
+@import "utils";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: $sandy-brown;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-banner {
+    background-image: url('../assets/Dr-Ofelya-Cabral-banner.webp');
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 61vh;
+
+    &__title {
+        font-size: 2rem;
+    }
+}

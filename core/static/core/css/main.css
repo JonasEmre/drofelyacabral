@@ -1,131 +1,186 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,400&display=swap");
+.navbar {
+  background-color: #264653;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.navbar__logo {
+  color: #f3f3f3;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+.navbar__list {
+  display: flex;
+  list-style: none;
+  margin-right: 1rem;
+}
+.navbar__item {
+  padding: 0.618rem;
+}
+.navbar__item > a {
+  color: #f3f3f3;
+}
+.navbar-desktop {
+  display: block;
+}
+@media (max-width: 64em) {
+  .navbar-desktop {
+    display: none;
+  }
+}
 
-:root {
-  --cool-red: rgb(253, 68, 68);
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown__button {
+  border: none;
+  background-color: transparent;
+  color: #f3f3f3;
+  font-size: 1rem;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #264653;
+  min-width: 15rem;
+  z-index: 1;
+}
+.dropdown__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.dropdown__item {
+  padding: 0.5rem;
+}
+.dropdown a {
+  color: #f3f3f3;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-  --charcoal: #264653ff;
-  --persian-green: #2a9d8fff;
-  --saffron: #e9c46aff;
-  --sandy-brown: #f4a261ff;
-  --burnt-sienna: #e76f51ff;
+.hamburger {
+  display: none;
+}
+.hamburger__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+}
+.hamburger__line, .hamburger__line::after, .hamburger__line::before {
+  background-color: #f3f3f3;
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+}
+.hamburger__line::after, .hamburger__line::before {
+  content: "";
+}
+.hamburger__line::before {
+  transform: translate(-1rem, -0.5rem);
+}
+.hamburger__line::after {
+  transform: translate(-1rem, 0.5rem);
+}
+@media (max-width: 64em) {
+  .hamburger {
+    display: block;
+  }
+}
+.hamburger-menu {
+  background-color: #264653;
+  display: none;
+  transform-origin: top center;
+  animation: showMenu 0.3s ease-in-out forwards;
+}
+.hamburger__list {
+  list-style: none;
+}
 
-  --flat-black: #000;
+.dropdown-hamburger {
+  display: none;
+  transform-origin: top center;
+  animation: showMenu 0.3s ease-in-out forwards;
+}
+
+.rotate {
+  background-color: transparent;
+}
+.rotate::after {
+  transform: translateX(-1.25rem) rotate(-45deg);
+}
+.rotate::before {
+  transform: translateX(-1.25rem) rotate(45deg);
+}
+
+@keyframes showMenu {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.text-white {
+  color: #f3f3f3;
+}
+.text-center {
+  text-align: center;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background-color: #f4a261;
 }
 
 ::selection {
-  background: var(--sandy-brown);
+  background-color: #f4a261;
 }
 
-* {
+body {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
 }
 
-p {
-  font-weight: 400;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
-  color: var(--persian-green);
+button {
+  font-family: "Poppins", sans-serif;
 }
 
 a {
-  color: var(--persian-green);
-}
-
-.display-counter {
-  font-size: calc(1.625rem + 5vw);
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--burnt-sienna);
-}
-
-.display-counter-text {
-  font-weight: 600;
-  color: var(--burnt-sienna);
-}
-
-.feature {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 5rem;
-  width: 5rem;
-  font-size: 2rem;
-}
-
-.google-map-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding-top: 40%;
-  /* 16:9 aspect ratio (720 / 1280) */
-}
-
-.google-map-container iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  text-decoration: none;
 }
 
 .header-banner {
+  background-image: url("../assets/Dr-Ofelya-Cabral-banner.webp");
   background-size: cover;
-  background-position: center;
+  background-position: right;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  height: 61vh;
 }
-
-.header-banner h1 {
-  overflow: hidden;
-  font-weight: 400;
+.header-banner__title {
   font-size: 2rem;
-  letter-spacing: 0.1rem;
-}
-
-.header-banner h2 {
-  font-size: 1rem;
-}
-
-@media screen and (min-width: 300px) {
-  .header-banner {
-    height: 50vh;
-  }
-}
-
-@media screen and (min-width: 370px) {
-  .header-banner {
-    height: 40vh;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header-banner {
-    height: 60vh;
-  }
-}
-
-/* Özel Başlık */
-.title-header {
-  font-size: 3rem;
-  letter-spacing: 0.4rem;
-}
-
-/* Utility Sınıfları */
-.bg-primary-pg {
-  background-color: var(--persian-green);
-}
-
-.flat-black {
-  color: var(--flat-black);
-}
+}/*# sourceMappingURL=main.css.map */

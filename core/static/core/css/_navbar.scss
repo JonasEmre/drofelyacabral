@@ -1,0 +1,79 @@
+@import "variables";
+
+.navbar {
+  background-color: $charcoal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+
+  &__logo {
+    color: $font-white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    margin-right: 1rem;
+  }
+
+  &__item {
+    padding: 0.618rem;
+
+    > a {
+      color: $font-white;
+    }
+  }
+
+  &-desktop {
+    display: block;
+    @media (max-width: $laptop) {
+        display: none;
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    color: $font-white;
+    font-size: 1rem;
+  }
+
+  &-content {
+    display: none;
+    position: absolute;
+    background-color: $charcoal;
+    min-width: 15rem;
+    z-index: 1;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding: 0.5rem;
+  }
+
+  a {
+    color: $font-white;
+  }
+
+  &:hover &-content {
+    display: block;
+  }
+}
+
+
+
+

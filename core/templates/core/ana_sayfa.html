@@ -1,23 +1,20 @@
 {% extends 'core/base.html' %} {% load static %} 
 
 {% block content %}
-<header
-  class="header-banner py-4"
-  style="
-    background-image: url('{% static 'core/assets/Dr-Ofelya-Cabral-banner.webp' %}');
-    "
->
-  <h1 class="text-white text-center px-2 mb-5">
-    Online Panik Atak Tedavisi
-  </h1>
-  <h2 class="text-white text-center">Bilgi almak için bize ulaşın</h2>
-</header>
+
 
 <main>
+  <!-- Landing Sayfa Resmi -->
+  <section class="header-banner">
+    <h1 class="header-banner__title text-center text-white">
+      Online Panik Atak Tedavisi
+    </h1>
+    <h3 class="text-white text-center">Bilgi almak için bize ulaşın</h3>
+  </section>
   <!-- Giriş yazısı -->
   <section>
-    <div class="container px-3 mt-3">
-      <p class="text-center">
+    <div>
+      <p>
         Panik atak konusunda binlerce kişiye tedavi yolunu göstermiş
         <strong>Dr. Ofelya Cabral</strong>, doktorluğunu kendi muayenehanesinde
         devam ettirmektedir. Bunun yanında anksiyete / endişe-kaygı bozukluğu,
@@ -30,20 +27,20 @@
   </section>
 
   <!-- Hizmetler / Services-->
-  <section class="py-5 border-bottom" id="features">
-    <div class="container px-3">
-      <div class="row gx-3">
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <div class="row-lg text-center mb-2">
-            <div class="feature">
+  <section>
+    <div>
+      <div">
+        <div>
+          <div>
+            <div>
               <img
                 src="{% static 'core/icons/online-panik-atak-icon.svg' %}"
                 alt="Online Panik Atak Tedavisi"
               />
             </div>
           </div>
-          <h2 class="h4 fw-bolder text-center">Online Panik Atak Programı</h2>
-          <p class="text-center">
+          <h2>Online Panik Atak Programı</h2>
+          <p>
             Teşhis için önce Dr. Ofelya Cabral ile birebir, online ön görüşme
             yapılır. Daha sonrasında 6 saat süren, canlı panik atak eğitim
             programına katılınır. Hastamızın, bu eğitim sonrasında her gün
@@ -54,17 +51,17 @@
             ayarlanır.
           </p>
         </div>
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <div class="row-lg text-center mb-2">
-            <div class="feature">
+        <div>
+          <div>
+            <div>
               <img
                 src="{% static 'core/icons/yuz-yuze-terapi.svg' %}"
                 alt="Yüz yüze terapi"
               />
             </div>
           </div>
-          <h2 class="h4 fw-bolder text-center">Yüz yüze Terapi</h2>
-          <p class="text-center">
+          <h2>Yüz yüze Terapi</h2>
+          <p>
             Ankara’daki muayenehanesinde Dr. Ofelya Cabral, kişinin
             rahatsızlığının durumuna göre; ortalama 3-6 seans arasında süren,
             kendi çalıştığı konular hakkında uyguladığı tedavileri, birebir ve
@@ -75,17 +72,17 @@
             terapiler yapılır.
           </p>
         </div>
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <div class="row-lg text-center mb-2">
-            <div class="feature">
+        <div>
+          <div>
+            <div>
               <img
                 src="{% static 'core/icons/online-terapi-icon.svg' %}"
                 alt="Online Terapi"
               />
             </div>
           </div>
-          <h2 class="h4 fw-bolder text-center">Online Terapi</h2>
-          <p class="text-center">
+          <h2>Online Terapi</h2>
+          <p>
             Bireysel terapilerdeki sürecin aynısı online olarak, Ofelya hanımla
             birebir, görüntülü bir şekilde yapılır. Seans sonrasında verdiğimiz
             dinletiler e-posta aracılığıyla gönderilir. Bu telkin dinletilerini
@@ -101,23 +98,23 @@
   </section>
 
   <!-- Tedaviler / Treatments-->
-  <section class="bg-light">
-    <div class="container">
-      <div class="row justify-content-center">
+  <section >
+    <div>
+      <div>
         <!-- Tedavi Listesi-->
-        <div class="col-lg-6 col-xl-4">
-          <div class="card my-3">
-            <div class="card-body">
-              <div class="mb-3">
-                <span class="display-4 fw-bold">Tedaviler</span>
+        <div>
+          <div>
+            <div>
+              <div>
+                <span>Tedaviler</span>
               </div>
-              <ul class="list-unstyled mb-4">
-                <li class="mb-2">Panik Atak ve Panik Bozukluğu</li>
-                <li class="mb-2">Anksiyete - Endişe Bozukluğu</li>
-                <li class="mb-2">Depresyon</li>
-                <li class="mb-2">İlişki ve Çift Terapisi</li>
-                <li class="mb-2">Öfke Kontrol Bozukluğu</li>
-                <li class="mb-2">Takıntılı Düşünceler</li>
+              <ul>
+                <li>Panik Atak ve Panik Bozukluğu</li>
+                <li>Anksiyete - Endişe Bozukluğu</li>
+                <li>Depresyon</li>
+                <li>İlişki ve Çift Terapisi</li>
+                <li>Öfke Kontrol Bozukluğu</li>
+                <li>Takıntılı Düşünceler</li>
               </ul>
             </div>
           </div>
@@ -132,7 +129,6 @@
       <a href="{% url 'dinletiler' %}">
         <!-- Use the anchor element to create a link -->
         <img
-          class="mw-100"
           src="{% static 'core/assets/dinletiler-banner.svg' %}"
           alt="Dinletiler Sitemizde Mevcuttur"
           loading="lazy"
@@ -142,16 +138,16 @@
   </section>
 
   <!-- Galeri-->
-  <section class="py-5 border-bottom">
-    <div class="container mb-5">
+  <section>
+    <div>
       <h3>2005 yılından bu yana</h3>
-      <p class="lead mb-1">
+      <p >
         Dr. Ofelya Cabral kendi kliniğinde tedavilerine devam etmektedir.
       </p>
     </div>
-    <div class="container lightbox">
-      <div class="row">
-        <div class="col">
+    <div>
+      <div
+        <div>
           <img
             src="{% static 'core/assets/Linda-Howe-Ofelya-Cabral.jpg' %}"
             alt="Ofelya Cabral ve Linda Howe"
@@ -161,15 +157,13 @@
           <img
             src="{% static 'core/assets/Ofelya-Thomas-Cabral.jpg' %}"
             alt="Ofelya ve Thomas Cabral"
-            class="w-100 shadow-1-strong rounded"
             loading="lazy"
           />
         </div>
-        <div class="col">
+        <div>
           <img
             src="{% static 'core/assets/Ofelya-Cabral-Kayıt-Dinleti.jpg' %}"
             alt="Ofelya Cabral ve Dinleti kayıtları"
-            class="w-100 shadow-1-strong rounded"
             loading="lazy"
           />
         </div>
@@ -178,29 +172,29 @@
   </section>
 
   <!-- Abonelik formu -->
-  <section class="bg-light py-5">
-    <div class="container text-center">
-      <div class="text-center mb-5">
-        <div class="row-lg text-center mb-2">
+  <section>
+    <div>
+      <div>
+        <div>
           <div
             class="{% static 'core/icons/abone-icon.svg' %}"
             alt="Online Terapi"
           ></div>
         </div>
-        <h2 class="fw-bolder">Abone Ol</h2>
-        <p class="lead mb-0">
+        <h2>Abone Ol</h2>
+        <p>
           Tedavi programlarımızdan ve gelişmelerden haberdar olun.
         </p>
       </div>
-      <div class="row gx-5 justify-content-center">
-        <div class="col-lg-6">
+      <div>
+        <div>
           <form method="post" action>
             {% csrf_token %}
             <div>
               <!-- {{ form }} -->
               form
             </div>
-            <div class="py-2">
+            <div>
               <button type="submit" class="btn btn-primary">Abone Ol</button>
             </div>
           </form>
@@ -210,7 +204,7 @@
   </section>
 
   <!-- Google Harita ve Adres -->
-  <section class="google-map-container">
+  <section>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12244.093685268537!2d32.879707!3d39.8961079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fc1bc796d19%3A0x201914f21208c37d!2sDr.%20Ofelya%20Cabral!5e0!3m2!1str!2str!4v1697896781490!5m2!1str!2str"
       width="200"

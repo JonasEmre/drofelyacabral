@@ -1,0 +1,12 @@
+
+@import "variables";
+
+.text {
+    &-white {
+        color: $font-white;
+    }
+
+    &-center {
+        text-align: center;
+    }
+}
