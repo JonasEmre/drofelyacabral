@@ -1,0 +1,9 @@
+<div class="flex-center container">
+  <form class="contact-form" method="post" action="">
+    <legend>Bize Mesaj Gönderin</legend>
+    {% csrf_token %}
+    {{ iletisim_form.sender_email }}
+    {{ iletisim_form.context }}
+    <button class="button" type="submit">Gönder</button>
+  </form>
+</div>

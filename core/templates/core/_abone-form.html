@@ -1,0 +1,8 @@
+<div class="abone-ol container">
+  <i class="abone-icon"></i>
+  <form class="abone-ol__form" method="post" action="">
+    {% csrf_token %}
+    {{ abone_form.subscription_email }}
+    <button class="button" type="submit">Abone ol</button>
+  </form>
+</div>

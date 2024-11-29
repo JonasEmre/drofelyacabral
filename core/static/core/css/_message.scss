@@ -1,0 +1,25 @@
+@import "variables";
+
+.message {
+    padding: 0.5rem 1rem;
+
+    &-success {
+        @extend .message;
+        background-color: $success;
+    }
+
+    &-warning {
+        @extend .message;
+        background-color: $warning;
+    }
+
+    &-info {
+        @extend .message;
+        background-color: $info;
+    }
+
+    &-error {
+        @extend .message;
+        background-color: $error;
+    }
+}

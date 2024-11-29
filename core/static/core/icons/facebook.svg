@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 128 128" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Katman-1" vectornator:layerName="Katman 1">
+<g opacity="1" vectornator:layerName="Facebook">
+<path d="M64 0.328C28.656 0.328 0 28.984 0 64.328C0 96.4133 23.6373 122.909 54.432 127.539L54.432 81.288L38.5973 81.288L38.5973 64.4667L54.432 64.4667L54.432 53.272C54.432 34.7387 63.4613 26.6053 78.864 26.6053C86.24 26.6053 90.144 27.1547 91.9893 27.4L91.9893 42.0827L81.4827 42.0827C74.944 42.0827 72.6613 48.2853 72.6613 55.272L72.6613 64.4667L91.824 64.4667L89.2267 81.288L72.6613 81.288L72.6613 127.672C103.899 123.437 128 96.728 128 64.328C128 28.984 99.344 0.328 64 0.328Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<section class="flex-center container mb-1">
+    <form class="contact-form" method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Giriş</legend>
+            <div>
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {% for error in form.username.errors %}
+                <span class="form-error">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.password.label_tag }}
+                {{ form.password }}
+                {% for error in form.password1.errors %}
+                <span class="form-error">{{ error }}</span>
+                {% endfor %}
+            </div>
+        </fieldset>
+        <button class="button mb-1" type="submit">Giriş</button>
+        <div class="form-bottom">
+            <small>Hesabınız yok mu? <a href="{% url 'kayit-ol' %}">Kayıt ol</a></small>
+        </div>
+    </form>
+</section>
+{% endblock %}

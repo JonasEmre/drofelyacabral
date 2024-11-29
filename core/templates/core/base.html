@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content />
-    <meta name="author" content />
-    {% if title %}
-    <title>{{ title }} | Dr. Ofelya Cabral</title>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content />
+  <meta name="author" content />
+  {% if title %}
+  <title>{{ title }} | Dr. Ofelya Cabral</title>
+  {% else %}
+  <title>Dr. Ofelya Cabral</title>
+  {% endif %}
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="{% static 'core/css/main.css' %}" />
+
+  {% block head %}{% endblock %}
+</head>
+<header>
+  {% if user.is_authenticated %}
+  <nav class="navbar navbar-user">
     {% else %}
-    <title>Dr. Ofelya Cabral</title>
-    {% endif %}
-
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="{% static 'core/css/main.css' %}" />
-
-    {% block head %}{% endblock %}
-  </head>
-  <header>
     <nav class="navbar">
+      {% endif %}
       <a href="{% url 'ana-sayfa' %}" class="navbar__logo">Dr. Ofelya Cabral</a>
       <div class="navbar-desktop">
         <ul class="navbar__list">
@@ -29,7 +31,10 @@
             <a href="{% url 'ana-sayfa' %}">Ana Sayfa</a>
           </li>
           <li class="navbar__item">
-            <a href="{% url 'ana-sayfa' %}">Yazılar</a>
+            <a href="{% url 'blog' %}">Yazılar</a>
+          </li>
+          <li class="navbar__item">
+            <a href="{% url 'dinletiler' %}">Dinletiler</a>
           </li>
           <li class="navbar__item">
             <div class="dropdown">
@@ -51,13 +56,16 @@
                     <a href="{% url 'sosyal-fobi' %}">Sosyal Fobi</a>
                   </li>
                   <li class="navbar__item">
-                    <a href="{% url 'ofke-kontrol-bozukluk' %}">Öfke Kontrol Bozukluğu</a>
+                    <a href="{% url 'ofke-kontrol-bozukluk' %}">Öfke Kontrol
+                      Bozukluğu</a>
                   </li>
                   <li class="navbar__item">
-                    <a href="{% url 'iliski-cift-terapisi' %}">İlişki ve Çift Terapisi</a>
+                    <a href="{% url 'iliski-cift-terapisi' %}">İlişki ve Çift
+                      Terapisi</a>
                   </li>
                   <li class="navbar__item">
-                    <a href="{% url 'takintili-dusunce' %}">Takıntılı Düşünceler</a>
+                    <a href="{% url 'takintili-dusunce' %}">Takıntılı
+                      Düşünceler</a>
                   </li>
                 </ul>
               </div>
@@ -69,24 +77,38 @@
           <li class="navbar__item">
             <a href="{% url 'iletisim' %}">İletişim</a>
           </li>
+          {% if user.is_authenticated %}
+          <li class="navbar__item">
+            <a href="{% url 'panik-atak-set-programi' %}">Panik Atak Set Programı</a>
+          </li>
+          <li class="navbar__item">
+            <a href="{% url 'cikis' %}">Çıkış</a>
+          </li>
+          {% endif %}
         </ul>
       </div>
       <div class="hamburger">
-        <button
-          type="button"
-          class="hamburger__btn"
-          href="#"
-          onclick="showMenu()"
-        >
+        <button type="button" class="hamburger__btn" href="#" onclick="showMenu()">
           <span class="hamburger__line" id="hamburger-line"></span>
         </button>
       </div>
     </nav>
-    <div class="hamburger-menu" id="hamburger-menu">
+    <div class="hamburger-menu {% if user.is_authenticated %}hamburger-menu-user{% endif %}" id="hamburger-menu">
       <!-- Ana seçenekler -->
       <ul class="hamburger__list">
+        {% if user.is_authenticated %}
         <li class="navbar__item">
+          <a href="{% url 'panik-atak-set-programi' %}">Panik Atak Set Programı</a>
+        </li>
+        <li class="navbar__item">
+          <a href="{% url 'cikis' %}">Çıkış</a>
+        </li>
+        {% endif %}
+        <li class="navbar__item {% if user.is_authenticated %}mt-1 navbar-user-seperator{% endif %}">
           <a href="{% url 'ana-sayfa' %}">Ana Sayfa</a>
+        </li>
+        <li class="navbar__item">
+          <a href="{% url 'blog' %}">Yazılar</a>
         </li>
         <!-- Tedaviler -->
         <li class="navbar__item">
@@ -107,10 +129,12 @@
                 <a href="{% url 'sosyal-fobi' %}">Sosyal Fobi</a>
               </li>
               <li class="navbar__item">
-                <a href="{% url 'ofke-kontrol-bozukluk' %}">Öfke Kontrol Bozukluğu</a>
+                <a href="{% url 'ofke-kontrol-bozukluk' %}">Öfke Kontrol
+                  Bozukluğu</a>
               </li>
               <li class="navbar__item">
-                <a href="{% url 'iliski-cift-terapisi' %}">İlişki ve Çift Terapisi</a>
+                <a href="{% url 'iliski-cift-terapisi' %}">İlişki ve Çift
+                  Terapisi</a>
               </li>
               <li class="navbar__item">
                 <a href="{% url 'takintili-dusunce' %}">Takıntılı Düşünceler</a>
@@ -120,6 +144,9 @@
         </li>
 
         <li class="navbar__item">
+          <a href="{% url 'dinletiler' %}">Dinletiler</a>
+        </li>
+        <li class="navbar__item">
           <a href="{% url 'hakkinda' %}">Hakkında</a>
         </li>
         <li class="navbar__item">
@@ -127,32 +154,50 @@
         </li>
       </ul>
     </div>
-  </header>
+</header>
 
-  <body>
-    <!-- Flash Mesajları -->
+<body>
+  <!-- Flash Mesajları -->
+  {% if messages %}
+  {% for message in messages %}
+  <p{% if message.tags %} class="message-{{ message.tags }}" {% else %} class="message" {% endif %}>{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+    <main>
+      {% block content %}{% endblock %}
+    </main>
 
-    <!-- Header-->
-    {% block content %}{% endblock %}
     <!-- Footer-->
-    <footer>
-      <div>
-        <p>
-          Copyright &copy; 2023 DR. OFELYA CABRAL - Bu site sağlık hizmeti
-          vermemektedir, kişileri bilgilendirmek ve site sahibi hakkında bilgi
-          vermek amacı ile hazırlanmıştır. Sitedeki bilgiler hastalıkların tanı
-          veya tedavisinde kullanılmak üzere verilmemiştir. Tanı ve tedaviler
-          mutlaka bir hekim tarafından yapılması gereken işlemlerdir. Site
-          içeriğinin bir şekilde tanı ve tedavi amacıyla kullanımından doğacak
-          sorumluluk ziyaretçiye aittir.
-        </p>
+    <footer class="footer {% if user.is_authenticated %}footer-user{% endif %}">
+      <div class="footer__top">
+        <div class="address">
+          <p>Uğur Mumcu Caddesi 94/6</p>
+          <p>Çankaya / Ankara</p>
+          <p>&#9743; 0312 447 05 67</p>
+        </div>
+        {% if request.get_full_path != '/kayit-ol/' and request.get_full_path != '/giris/' %}
+        {% include 'core/_abone-form.html' %}
+        {% endif %}
+        <div class="footer__social-media">
+          <i class="instagram social-media-icon"></i>
+          <i class="facebook social-media-icon"></i>
+          <i class="youtube social-media-icon"></i>
+        </div>
       </div>
+      <p class="footer__bottom">
+        Copyright &copy; 2023 DR. OFELYA CABRAL - Bu site sağlık hizmeti
+        vermemektedir, kişileri bilgilendirmek ve site sahibi hakkında bilgi
+        vermek amacı ile hazırlanmıştır. Sitedeki bilgiler hastalıkların tanı
+        veya tedavisinde kullanılmak üzere verilmemiştir. Tanı ve tedaviler
+        mutlaka bir hekim tarafından yapılması gereken işlemlerdir. Site
+        içeriğinin bir şekilde tanı ve tedavi amacıyla kullanımından doğacak
+        sorumluluk ziyaretçiye aittir.
+      </p>
+
     </footer>
     <script src="{% static 'core/js/script.js' %}"></script>
     <!-- Tidio Scripts -->
-    <script
-      src="//code.tidio.co/kkj09m5amrvvjvazruasvt5qrl7y3nai.js"
-      async
-    ></script>
-  </body>
+    <script src="//code.tidio.co/kkj09m5amrvvjvazruasvt5qrl7y3nai.js" async></script>
+</body>
+
 </html>

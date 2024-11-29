@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %} {% block content %}
+<section class="blog__page container">
+    {% for blog in blogs %}
+    <div class="post__blog">
+        <!-- Blog Açıklama ve Başlık -->
+        <div class="container">
+            <h3 class="post__title">
+                <a class="post__blog-link" href="{% url 'blog-detail' blog.id %}">{{ blog.title|safe }}</a>
+            </h3>
+            <p>{{ blog.description|safe }}</p>
+        </div>
+        <!-- Blog Thumbnail -->
+        <div class="container">
+            {% if blog.thumbnail %}
+            <img class="post__image" src="{{ blog.thumbnail.url }}" alt="{{ blog.title }}">
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}

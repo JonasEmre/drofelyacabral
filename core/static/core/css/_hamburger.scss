@@ -44,7 +44,7 @@
   }
 
   &-menu {
-    background-color: $charcoal;
+    background-color: $persian-green;
     display: none;
     transform-origin: top center;
     animation: showMenu 0.3s ease-in-out forwards;
@@ -53,6 +53,10 @@
   &__list {
     list-style: none;
   }
+}
+
+.hamburger-menu-user {
+  background-color: $charcoal;
 }
 
 .dropdown-hamburger {

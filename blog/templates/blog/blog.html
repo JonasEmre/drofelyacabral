@@ -1,0 +1,9 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<article class="container">
+    <section class="blog">
+        <h1>{{ blog.title|safe}}</h1>
+        {{ blog.content|safe }}
+    </section>
+</article>
+{% endblock %}

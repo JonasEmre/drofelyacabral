@@ -1,17 +1,22 @@
 @import "variables";
 
 .navbar {
-  background-color: $charcoal;
+  background-color: $persian-green;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.25rem;
 
   &__logo {
     color: $font-white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    padding: 0.5rem;
+    padding: 0.25rem;
+    margin-left: 1rem;
+
+    &:hover {
+      color: $font-highlight;
+    }
   }
 
   &__list {
@@ -31,9 +36,18 @@
   &-desktop {
     display: block;
     @media (max-width: $laptop) {
-        display: none;
+      display: none;
     }
   }
+}
+
+.navbar-user-seperator {
+  padding-top: 2rem;
+  border-top: 0.0625rem solid $font-white;
+}
+
+.navbar-user {
+  background-color: $charcoal;
 }
 
 .dropdown {
@@ -50,7 +64,7 @@
   &-content {
     display: none;
     position: absolute;
-    background-color: $charcoal;
+    background-color: $persian-green;
     min-width: 15rem;
     z-index: 1;
   }
@@ -73,7 +87,3 @@
     display: block;
   }
 }
-
-
-
-

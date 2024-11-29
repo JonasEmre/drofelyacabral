@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import "variables";
 @import "navbar";
 @import "hamburger";
 @import "utils";
+@import "footer";
+@import "message";
+@import "form";
+@import "blog";
 
 *,
 *::before,
@@ -17,11 +21,24 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $persian-green;
 }
 
 button {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  min-height: 50vh;
 }
 
 a {
@@ -29,16 +46,255 @@ a {
 }
 
 .header-banner {
-    background-image: url('../assets/Dr-Ofelya-Cabral-banner.webp');
-    background-size: cover;
-    background-position: right;
+  background-image: url("../assets/Dr-Ofelya-Cabral-banner.webp");
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  position: relative;
+
+  svg {
+    display: block;
+    position: absolute;
+    bottom: -0.1rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    text-shadow: 1rem 1rem 5rem $charcoal;
+
+    @media (min-width: $tablet) {
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    text-shadow: 1rem 1rem 3rem $charcoal;
+  }
+
+  @media (min-width: $tablet) {
+    height: 80vh;
+  }
+}
+
+.container {
+  padding: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  // border: 0.0625rem solid $charcoal;
+  box-shadow: 0.1rem 0.0625rem 0.2rem $charcoal;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+
+  figure {
     display: flex;
-    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    height: 61vh;
+  }
 
-    &__title {
-        font-size: 2rem;
+  &__image {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__title {
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    box-shadow: 0.0625rem 0.0625rem 0.5rem;
+  }
+}
+
+.services-section {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  align-content: center;
+
+  @media (min-width: $laptop) {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.steps-section {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem 1rem;
+  justify-content: center;
+  align-content: center;
+
+  @media (min-width: $laptop) {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.treatments-section {
+  background-color: $sandy-brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  margin-top: 1rem;
+  position: relative;
+
+  svg {
+    display: block;
+    position: absolute;
+    top: -0;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      padding: 0.5rem;
+      color: $font-white;
+      color: $charcoal;
     }
+  }
+
+  &__icon {
+    background-image: url("../icons/tedaviler.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+
+    &-link {
+      color: $charcoal;
+      transition: color 200ms ease-in-out;
+    }
+
+    &-link:hover {
+      color: $persian-green;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 15rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.counter-section {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+  }
+
+  @media (min-width: $laptop) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+.display-counter {
+  font-size: 1.618rem;
+  font-weight: 700;
+  color: $error;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: min(50%, 25rem);
+      padding: 0.25rem;
+      border-radius: 1rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+    img {
+      border-radius: 1rem;
+    }
+  }
+}
+
+.google-map {
+  width: 100%;
+}
+
+.button {
+  border: 0.0625rem solid $font-white;
+  border-radius: 0.2rem;
+  background-color: $persian-green;
+  // box-shadow: 0.1rem 0.1rem 0.2rem $charcoal;
+  width: 10rem;
+  height: 2.5rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+  color: $font-white;
+
+  &:hover {
+    border: 0;
+    background-color: $charcoal;
+    color: $font-white;
+    box-shadow: 0.1rem 0.1rem 0.4rem $charcoal;
+  }
+}
+
+.intro-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.symptoms {
+  padding: 1rem;
+
+  &__item {
+    margin: 1rem;
+    > p {
+      margin: 0rem 1rem;
+    }
+  }
+}
+
+.paragraph {
+  margin-top: 1rem;
+}
+
+.article {
+  > p {
+    margin: 1rem 0rem;
+  }
 }

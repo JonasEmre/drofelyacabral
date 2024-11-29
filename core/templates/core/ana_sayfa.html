@@ -1,219 +1,153 @@
-{% extends 'core/base.html' %} {% load static %} 
+{% extends 'core/base.html' %} {% load static %}
 
 {% block content %}
+<!-- Landing Sayfa Resmi -->
+<section class="header-banner">
+  <h1 class="appear header-banner__title text-center text-white">
+    Online Panik Atak Tedavisi
+  </h1>
+  <h3 class="appear header-banner__subtitle text-white text-center">Bilgi almak için bize ulaşın</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+    <path fill="#fff" fill-opacity="1"
+      d="M0,160L48,160C96,160,192,160,288,149.3C384,139,480,117,576,117.3C672,117,768,139,864,138.7C960,139,1056,117,1152,117.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    </path>
+  </svg>
+</section>
+<!-- Giriş yazısı -->
+<section class="container">
+  <p class="text-center">
+    Panik atak konusunda binlerce kişiye tedavi yolunu göstermiş
+    <strong>Dr. Ofelya Cabral</strong>, doktorluğunu kendi muayenehanesinde
+    devam ettirmektedir. Bunun yanında anksiyete / endişe-kaygı bozukluğu,
+    depresyon gibi konularda da uzmanlaşmış ve temel uygulamalarında ilacı
+    tedavinin kendisi olarak değil, ancak
+    <strong>gerektiği</strong> durumlarda tedavi sürecine destek olarak
+    gördüğü, ilaç yanlısı olmayan bir yol izlemiştir.
+  </p>
+</section>
 
-
-<main>
-  <!-- Landing Sayfa Resmi -->
-  <section class="header-banner">
-    <h1 class="header-banner__title text-center text-white">
-      Online Panik Atak Tedavisi
-    </h1>
-    <h3 class="text-white text-center">Bilgi almak için bize ulaşın</h3>
-  </section>
-  <!-- Giriş yazısı -->
-  <section>
-    <div>
-      <p>
-        Panik atak konusunda binlerce kişiye tedavi yolunu göstermiş
-        <strong>Dr. Ofelya Cabral</strong>, doktorluğunu kendi muayenehanesinde
-        devam ettirmektedir. Bunun yanında anksiyete / endişe-kaygı bozukluğu,
-        depresyon gibi konularda da uzmanlaşmış ve temel uygulamalarında ilacı
-        tedavinin kendisi olarak değil, ancak
-        <strong>gerektiği</strong> durumlarda tedavi sürecine destek olarak
-        gördüğü, ilaç yanlısı olmayan bir yol izlemiştir.
-      </p>
-    </div>
-  </section>
-
+<!-- Hizmetler Kart -->
+<section class="container">
   <!-- Hizmetler / Services-->
-  <section>
-    <div>
-      <div">
-        <div>
-          <div>
-            <div>
-              <img
-                src="{% static 'core/icons/online-panik-atak-icon.svg' %}"
-                alt="Online Panik Atak Tedavisi"
-              />
-            </div>
-          </div>
-          <h2>Online Panik Atak Programı</h2>
-          <p>
-            Teşhis için önce Dr. Ofelya Cabral ile birebir, online ön görüşme
-            yapılır. Daha sonrasında 6 saat süren, canlı panik atak eğitim
-            programına katılınır. Hastamızın, bu eğitim sonrasında her gün
-            ortalama bir saat zaman ayırarak kendi kendisine uygulayacağı 21
-            günlük programla devam edilir. Bu sürece destek olarak da set
-            programı gönderilir ve süreç boyunca bizimle irtibatta olunur.
-            Programın bitiminde Dr. Ofelya Cabral ile birebir takip seansı
-            ayarlanır.
-          </p>
-        </div>
-        <div>
-          <div>
-            <div>
-              <img
-                src="{% static 'core/icons/yuz-yuze-terapi.svg' %}"
-                alt="Yüz yüze terapi"
-              />
-            </div>
-          </div>
-          <h2>Yüz yüze Terapi</h2>
-          <p>
-            Ankara’daki muayenehanesinde Dr. Ofelya Cabral, kişinin
-            rahatsızlığının durumuna göre; ortalama 3-6 seans arasında süren,
-            kendi çalıştığı konular hakkında uyguladığı tedavileri, birebir ve
-            yüz yüze şekilde yapıyor. Bu seanslarda Ofelya hanımın uygulayacağı
-            teknikler, yine kişinin durumuna göre değişiklik gösterir.
-            Seansların aralığı ise genel olarak 2 ile 4 haftada bir olacak
-            şekilde belirlenir. Bu seanslarda psikoterapi ve uygulamalı
-            terapiler yapılır.
-          </p>
-        </div>
-        <div>
-          <div>
-            <div>
-              <img
-                src="{% static 'core/icons/online-terapi-icon.svg' %}"
-                alt="Online Terapi"
-              />
-            </div>
-          </div>
-          <h2>Online Terapi</h2>
-          <p>
-            Bireysel terapilerdeki sürecin aynısı online olarak, Ofelya hanımla
-            birebir, görüntülü bir şekilde yapılır. Seans sonrasında verdiğimiz
-            dinletiler e-posta aracılığıyla gönderilir. Bu telkin dinletilerini
-            bir sonraki seansa kadar her gün uygulamak gerekiyor. Hastalarımızın
-            yarısına yakın bir kısmı terapilerini online olarak tercih
-            ediyorlar. Dünyanın neresinde olursanız olun, bireysel
-            terapilerinize WhatsApp veya Zoom uygulamaları üzerinden
-            katılabilirsiniz.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tedaviler / Treatments-->
-  <section >
-    <div>
-      <div>
-        <!-- Tedavi Listesi-->
-        <div>
-          <div>
-            <div>
-              <div>
-                <span>Tedaviler</span>
-              </div>
-              <ul>
-                <li>Panik Atak ve Panik Bozukluğu</li>
-                <li>Anksiyete - Endişe Bozukluğu</li>
-                <li>Depresyon</li>
-                <li>İlişki ve Çift Terapisi</li>
-                <li>Öfke Kontrol Bozukluğu</li>
-                <li>Takıntılı Düşünceler</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Dinletiler Banner -->
-  <section>
-    <div>
-      <a href="{% url 'dinletiler' %}">
-        <!-- Use the anchor element to create a link -->
-        <img
-          src="{% static 'core/assets/dinletiler-banner.svg' %}"
-          alt="Dinletiler Sitemizde Mevcuttur"
-          loading="lazy"
-        />
-      </a>
-    </div>
-  </section>
-
-  <!-- Galeri-->
-  <section>
-    <div>
-      <h3>2005 yılından bu yana</h3>
-      <p >
-        Dr. Ofelya Cabral kendi kliniğinde tedavilerine devam etmektedir.
+  <h2 class="page-title text-center">Psikolojik Rahatsızlık Tedavisi ve Online Terapi Hizmetlerimiz</h2>
+  <div class="services-section">
+    <!-- Birinci Kart -->
+  <div class="card">
+    <figure>
+      <img class="card__image" src="{% static 'core/icons/online-panik-atak-icon.svg' %}"
+        alt="Online Panik Atak Tedavisi" />
+    </figure>
+    <div class="card__body">
+      <h2 class="card__title text-center">Online Panik Atak Programı</h2>
+      <p class="text-center">
+        Teşhis için önce Dr. Ofelya Cabral ile birebir, online ön görüşme
+        yapılır. Daha sonrasında 6 saat süren, canlı panik atak eğitim
+        programına katılınır. Hastamızın, bu eğitim sonrasında her gün
+        ortalama bir saat zaman ayırarak kendi kendisine uygulayacağı 21
+        günlük programla devam edilir. Bu sürece destek olarak da set
+        programı gönderilir ve süreç boyunca bizimle irtibatta olunur.
+        Programın bitiminde Dr. Ofelya Cabral ile birebir takip seansı
+        ayarlanır.
       </p>
     </div>
-    <div>
-      <div
-        <div>
-          <img
-            src="{% static 'core/assets/Linda-Howe-Ofelya-Cabral.jpg' %}"
-            alt="Ofelya Cabral ve Linda Howe"
-            class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
-            loading="lazy"
-          />
-          <img
-            src="{% static 'core/assets/Ofelya-Thomas-Cabral.jpg' %}"
-            alt="Ofelya ve Thomas Cabral"
-            loading="lazy"
-          />
-        </div>
-        <div>
-          <img
-            src="{% static 'core/assets/Ofelya-Cabral-Kayıt-Dinleti.jpg' %}"
-            alt="Ofelya Cabral ve Dinleti kayıtları"
-            loading="lazy"
-          />
-        </div>
-      </div>
+  </div>
+  <!-- İkinci Kart -->
+  <div class="card">
+    <figure>
+      <img class="card__image" src="{% static 'core/icons/yuz-yuze-terapi.svg' %}" alt="Yüz yüze terapi" />
+    </figure>
+    <div class="card__body">
+      <h2 class="card__title text-center">Yüz yüze Terapi</h2>
+      <p class="text-center">
+        Ankara’daki muayenehanesinde Dr. Ofelya Cabral, kişinin
+        rahatsızlığının durumuna göre; ortalama 3-6 seans arasında süren,
+        kendi çalıştığı konular hakkında uyguladığı tedavileri, birebir ve
+        yüz yüze şekilde yapıyor. Bu seanslarda Ofelya hanımın uygulayacağı
+        teknikler, yine kişinin durumuna göre değişiklik gösterir.
+        Seansların aralığı ise genel olarak 2 ile 4 haftada bir olacak
+        şekilde belirlenir. Bu seanslarda psikoterapi ve uygulamalı
+        terapiler yapılır.
+      </p>
     </div>
-  </section>
-
-  <!-- Abonelik formu -->
-  <section>
-    <div>
-      <div>
-        <div>
-          <div
-            class="{% static 'core/icons/abone-icon.svg' %}"
-            alt="Online Terapi"
-          ></div>
-        </div>
-        <h2>Abone Ol</h2>
-        <p>
-          Tedavi programlarımızdan ve gelişmelerden haberdar olun.
-        </p>
-      </div>
-      <div>
-        <div>
-          <form method="post" action>
-            {% csrf_token %}
-            <div>
-              <!-- {{ form }} -->
-              form
-            </div>
-            <div>
-              <button type="submit" class="btn btn-primary">Abone Ol</button>
-            </div>
-          </form>
-        </div>
-      </div>
+  </div>
+  <!-- Üçüncü Kart -->
+  <div class="card">
+    <figure>
+      <img class="card__image" src="{% static 'core/icons/online-terapi-icon.svg' %}" alt="Online Terapi" />
+    </figure>
+    <div class="card__body">
+      <h2 class="card__title text-center">Online Terapi</h2>
+      <p class="text-center">
+        Bireysel terapilerdeki sürecin aynısı online olarak, Ofelya hanımla
+        birebir, görüntülü bir şekilde yapılır. Seans sonrasında verdiğimiz
+        dinletiler e-posta aracılığıyla gönderilir. Bu telkin dinletilerini
+        bir sonraki seansa kadar her gün uygulamak gerekiyor. Hastalarımızın
+        yarısına yakın bir kısmı terapilerini online olarak tercih
+        ediyorlar. Dünyanın neresinde olursanız olun, bireysel
+        terapilerinize WhatsApp veya Zoom uygulamaları üzerinden
+        katılabilirsiniz.
+      </p>
     </div>
-  </section>
+  </div>
+  </div>
+</section>
 
-  <!-- Google Harita ve Adres -->
-  <section>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12244.093685268537!2d32.879707!3d39.8961079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fc1bc796d19%3A0x201914f21208c37d!2sDr.%20Ofelya%20Cabral!5e0!3m2!1str!2str!4v1697896781490!5m2!1str!2str"
-      width="200"
-      height="200"
-      style="border: 0"
-      allowfullscreen
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </section>
-</main>
+<!-- Tedaviler / Treatments-->
+<section class="treatments-section">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+    <path fill="#fff" fill-opacity="1"
+      d="M0,192L80,176C160,160,320,128,480,122.7C640,117,800,139,960,149.3C1120,160,1280,160,1360,160L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+    </path>
+  </svg>
+  <!-- Tedavi Listesi-->
+  <h3 class="text-white text-charcoal">Tedaviler</h3>
+  <ul>
+    <li><i class="treatments-section__icon"></i><a class="treatments-section__icon-link" href="{% url 'panik-atak' %}">Panik Atak ve Panik Bozukluğu</a></li>
+    <li><i class="treatments-section__icon"></i><a class="treatments-section__icon-link" href="{% url 'anksiyete' %}">Anksiyete - Endişe Bozukluğu</a></li>
+    <li><i class="treatments-section__icon"></i><a class="treatments-section__icon-link" href="{% url 'depresyon' %}">Depresyon</a></li>
+    <li><i class="treatments-section__icon"></i><a class="treatments-section__icon-link" href="{% url 'iliski-cift-terapisi' %}">İlişki ve Çift Terapisi</a></li>
+    <li><i class="treatments-section__icon"></i><a class="treatments-section__icon-link" href="{% url 'ofke-kontrol-bozukluk' %}">Öfke Kontrol Bozukluğu</a></li>
+    <li><i class="treatments-section__icon"></i><a class="treatments-section__icon-link" href="{% url 'takintili-dusunce' %}">Takıntılı Düşünceler</a></li>
+  </ul>
+</section>
+
+<!-- Dinletiler Banner -->
+<section>
+  <div>
+    <a href="{% url 'dinletiler' %}">
+      <!-- Use the anchor element to create a link -->
+      <img src="{% static 'core/assets/dinletiler-banner.svg' %}" alt="Dinletiler Sitemizde Mevcuttur" loading="lazy" />
+    </a>
+  </div>
+</section>
+
+<!-- Galeri-->
+<section>
+  <div class="container">
+    <h3>2005 yılından bu yana</h3>
+    <p>
+      Dr. Ofelya Cabral kendi kliniğinde tedavilerine devam etmektedir.
+    </p>
+  </div>
+  <div class="gallery">
+    <div class="gallery__head">
+      <img src="{% static 'core/assets/Linda-Howe-Ofelya-Cabral.jpg' %}" alt="Ofelya Cabral ve Linda Howe"
+        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded" loading="lazy" />
+      <img src="{% static 'core/assets/Ofelya-Thomas-Cabral.jpg' %}" alt="Ofelya ve Thomas Cabral" loading="lazy" />
+    </div>
+    <div class="gallery__bottom">
+      <img src="{% static 'core/assets/Ofelya-Cabral-Kayıt-Dinleti.jpg' %}" alt="Ofelya Cabral ve Dinleti kayıtları"
+        loading="lazy" />
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Google Harita ve Adres -->
+<section>
+  <iframe class="google-map"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12244.093685268537!2d32.879707!3d39.8961079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fc1bc796d19%3A0x201914f21208c37d!2sDr.%20Ofelya%20Cabral!5e0!3m2!1str!2str!4v1697896781490!5m2!1str!2str"
+    width="200" height="200" style="border: 0" allowfullscreen loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
 {% endblock %}

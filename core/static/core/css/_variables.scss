@@ -1,13 +1,15 @@
 
 // Brand
 $charcoal: #264653ff;
-$persian-green: #2a9d8fff;
+// $persian-green: #2a9d8fff;
+$persian-green: rgb(11, 131, 117);
 $saffron: #e9c46aff;
 $sandy-brown: #f4a261ff;
 $burnt-sienna: #e76f51ff;
 
 // Text and Generic
 $font-white: #f3f3f3;
+$font-highlight: rgb(230, 207, 188);
 $dark: #161616;
 
 // Sizes
@@ -16,3 +18,10 @@ $mobile-lg: 26,5625em;
 $tablet: 48em;
 $laptop: 64em;
 $desktop: 90em;
+
+// Modifiers
+$success:#d4f0c1;
+$error: #e76f51ff;
+$warning: #e9c46aff;
+$info: #ebfeff;
+

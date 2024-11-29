@@ -1,0 +1,92 @@
+@import "variables";
+
+.abone-ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+
+.form-input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.25rem;
+  border: 0;
+  padding: 0.5rem;
+
+  &:focus {
+    outline-color: $burnt-sienna;
+  }
+}
+
+.message-input {
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 0;
+  padding: 0.5rem;
+
+  &:focus {
+    outline-color: $burnt-sienna;
+  }
+}
+
+.contact-form {
+  // border: 0.0625rem solid $charcoal;
+  box-shadow: 0.1rem 0.1rem 0.5rem $font-highlight;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 0.3rem;
+
+  min-width: 50%;
+
+  > fieldset {
+    border: 0;
+    > legend {
+      margin-bottom: 1rem;
+      border-bottom: 0.0625rem solid $charcoal;
+      color: $persian-green;
+      font-weight: 600;
+    }
+  }
+
+  &__input,
+  &__message {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    outline-color: $burnt-sienna;
+  }
+
+  &__input:focus,
+  &__message:focus {
+    outline-color: $burnt-sienna;
+  }
+
+  button {
+    display: block;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+.form-bottom {
+  color: $charcoal;
+  margin-top: 1rem;
+  border-top: 0.0625rem solid $persian-green;
+}
+
+.form-error {
+  color: $burnt-sienna;
+}
