@@ -5,17 +5,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.25rem;
+  padding: 0.5rem 0.25rem;
 
   &__logo {
     color: $font-white;
     font-size: 2rem;
     font-weight: bold;
-    padding: 0.25rem;
-    margin-left: 1rem;
+    margin-left: 0.618rem;
 
     &:hover {
-      color: $font-highlight;
+      color: darken($font-white, 10%);
     }
   }
 
@@ -30,6 +29,10 @@
 
     > a {
       color: $font-white;
+
+      &:hover {
+        color: darken($font-white, 10%);
+      }
     }
   }
 

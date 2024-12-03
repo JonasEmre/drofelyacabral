@@ -4,17 +4,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.25rem;
+  padding: 0.5rem 0.25rem;
 }
 .navbar__logo {
   color: #f3f3f3;
   font-size: 2rem;
   font-weight: bold;
-  padding: 0.25rem;
-  margin-left: 1rem;
+  margin-left: 0.618rem;
 }
 .navbar__logo:hover {
-  color: rgb(230, 207, 188);
+  color: #dadada;
 }
 .navbar__list {
   display: flex;
@@ -26,6 +25,9 @@
 }
 .navbar__item > a {
   color: #f3f3f3;
+}
+.navbar__item > a:hover {
+  color: #dadada;
 }
 .navbar-desktop {
   display: block;
@@ -289,6 +291,15 @@
   filter: brightness(0.6);
 }
 
+.phone-link {
+  color: #f3f3f3;
+  text-decoration: none;
+}
+.phone-link:hover {
+  color: #dadada;
+  text-decoration: none;
+}
+
 .message, .message-error, .message-info, .message-warning, .message-success {
   padding: 0.5rem 1rem;
 }
@@ -476,7 +487,7 @@ button {
 }
 
 main {
-  min-height: 50vh;
+  min-height: 70vh;
 }
 
 a {

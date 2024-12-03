@@ -16,6 +16,10 @@
   <!-- Core CSS -->
   <link rel="stylesheet" href="{% static 'core/css/main.css' %}" />
 
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'core/icons/Ofelya-Cabral-Logo.svg' %}" type="image/svg+xml">
+
+
   {% block head %}{% endblock %}
 </head>
 <header>
@@ -173,15 +177,20 @@
         <div class="address">
           <p>Uğur Mumcu Caddesi 94/6</p>
           <p>Çankaya / Ankara</p>
-          <p>&#9743; 0312 447 05 67</p>
+          <p>
+            &#9743; <a href="tel:+903124470567" class="phone-link">0312 447 05 67</a>
+          </p>
         </div>
         {% if request.get_full_path != '/kayit-ol/' and request.get_full_path != '/giris/' %}
         {% include 'core/_abone-form.html' %}
         {% endif %}
         <div class="footer__social-media">
-          <i class="instagram social-media-icon"></i>
-          <i class="facebook social-media-icon"></i>
-          <i class="youtube social-media-icon"></i>
+          <a rel="nofollow" target="blank" aria-label="Bizi Instagram'da takip edin" href="https://www.instagram.com/ofelyacabral/"
+            class="instagram social-media-icon"></a>
+          <a rel="nofollow" target="blank" aria-label="Bizi Facebook hesabımızdan takip edin"
+            href="https://www.facebook.com/ofelyacabral" class="facebook social-media-icon"></a>
+          <a rel="nofollow" target="blank" aria-label="Bizi YouTube'da takip edin"
+            href="https://www.youtube.com/@DrOfelyaCabral" class="youtube social-media-icon"></a>
         </div>
       </div>
       <p class="footer__bottom">
@@ -197,7 +206,9 @@
     </footer>
     <script src="{% static 'core/js/script.js' %}"></script>
     <!-- Tidio Scripts -->
+    {% if not user.is_authenticated %}
     <script src="//code.tidio.co/kkj09m5amrvvjvazruasvt5qrl7y3nai.js" async></script>
+    {% endif %}
 </body>
 
 </html>
